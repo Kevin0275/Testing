@@ -184,6 +184,20 @@
    git push origin branch-name
    ```
    
+   If you want to rename the branch:
+   ```bash
+   git branch -m <old-branch-name> <new-branch-name>
+   git push origin <new-branch-name>
+   git push origin --delete <old-branch-name>
+   ```
+   
+   You may also set the upstream branch such that the local branch and the online branch will all be locked together, next time you just need the basic command to achieve the push and pull.
+   ```bash
+   git branch --set-upstream-to=origin/remote-branch-name local-branch-name
+   ```
+   
+   
+   
 2. Switching between branches
    ```bash
    git checkout branch-name
