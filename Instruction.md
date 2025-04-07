@@ -110,7 +110,7 @@
    git status
    ```
 
-2. Making changes and staging files:
+3. Making changes and staging files:
 
    1. After you have made some changes:
       ```bash
@@ -127,6 +127,11 @@
       git reset <filename>
       ```
 
+      If you need to check which file has been added:
+      ```bash
+      git status
+      ```
+      
       
 
 3. Commit the changes:
