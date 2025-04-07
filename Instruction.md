@@ -208,12 +208,27 @@
    git checkout branch-name
    ```
 
-3. Merging the changes from another branch
+   Please be reminded your File Explorer will change the files with the changing of the branch.
+
+3. To view all the files in the branch:
+   ```bash
+   git ls-tree -r HEAD
+   ```
+
+   Or just:
+   ```bash
+   git ls-tree
+   ```
+
+   
+
+4. Merging the changes from another branch
+
    ```bash
    git merge feature-branch
    ```
 
-4. To check which branch you currently working with:
+5. To check which branch you currently working with:
    ```bash
    git branch
    ```
@@ -223,7 +238,7 @@
    git status
    ```
 
-5. Delete the local and remote branches.
+6. Delete the local and remote branches.
 
    1. Delete the local branch.
       Before that, make sure you are not in the branch you want to delete.
@@ -251,5 +266,4 @@
       ```
 
       It will delete all the reference on all the branches you have deleted.
-
 
