@@ -183,21 +183,21 @@
    ```bash
    git push origin branch-name
    ```
-   
+
    If you want to rename the branch:
    ```bash
    git branch -m <old-branch-name> <new-branch-name>
    git push origin <new-branch-name>
    git push origin --delete <old-branch-name>
    ```
-   
+
    You may also set the upstream branch such that the local branch and the online branch will all be locked together, next time you just need the basic command to achieve the push and pull.
    ```bash
    git branch --set-upstream-to=origin/remote-branch-name local-branch-name
    ```
+
    
-   
-   
+
 2. Switching between branches
    ```bash
    git checkout branch-name
@@ -218,5 +218,33 @@
    git status
    ```
 
-   
+5. Delete the local and remote branches.
+
+   1. Delete the local branch.
+      Before that, make sure you are not in the branch you want to delete.
+      Make sure the branch you want to delete contains no unmerged files, if there are some files, then git will remind you and refuse to delete it.
+
+      ```bash
+      git branch -d <branch-name>
+      ```
+
+      Also, if you don't want to merge it, just change the -d to -D
+
+   2. Delete the remote branch.
+      ```bash
+      git push origin --delete <branch-name>
+      ```
+
+      check whether it is already deleted:
+      ```bash
+      git branch -r
+      ```
+
+      If you want to make sure that no reference on this branch you deleted in your repository, use the command:
+      ```bash
+      git fetch -p
+      ```
+
+      It will delete all the reference on all the branches you have deleted.
+
 
