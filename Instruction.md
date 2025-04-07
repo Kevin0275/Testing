@@ -161,6 +161,15 @@
    git pull origin master
    ```
 
+
+7. If you want to delete some files:
+   ```bash
+   git rm <file-name>
+   git rm -r <folder-name>
+   git commit -m "delete something"
+   git push origin master
+   ```
+
    
 
 ## Part 5: Working with Branches
@@ -170,6 +179,11 @@
    git checkout -b new-branch-name
    ```
 
+   Please be reminded that this change should be pushed.
+   ```bash
+   git push origin branch-name
+   ```
+   
 2. Switching between branches
    ```bash
    git checkout branch-name
