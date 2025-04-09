@@ -189,20 +189,29 @@
    git push origin branch-name
    ```
 
+   However, this will make your branch contains same files with whichever branch where you were to create the new branch.
+   
+   If you want a completely clean branch:
+   ```bash
+   git checkout --orphan new-branch-name
+   git rm -rf .
+   ```
+   
    If you want to rename the branch:
+   
    ```bash
    git branch -m <old-branch-name> <new-branch-name>
    git push origin <new-branch-name>
    git push origin --delete <old-branch-name>
    ```
-
+   
    You may also set the upstream branch such that the local branch and the online branch will all be locked together, next time you just need the basic command to achieve the push and pull.
    ```bash
    git branch --set-upstream-to=origin/remote-branch-name local-branch-name
    ```
-
    
-
+   
+   
 2. Switching between branches
    ```bash
    git checkout branch-name
@@ -238,7 +247,7 @@
    git status
    ```
 
-6. Delete the local and remote branches.
+6. giutDelete the local and remote branches.
 
    1. Delete the local branch.
       Before that, make sure you are not in the branch you want to delete.
